@@ -12,21 +12,16 @@ public class Main {
                 El programa no terminará hasta que el usuario escriba el valor 0.*/
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int numero=0;
-        int total=0;
-        int recuento=1;
+        int numero = 0;
+        int total = 0;
 
-        do {
+        for (int i = 0; i < 10; i++) {
+
             System.out.print("Introduce un numero: ");
             numero = Integer.parseInt(br.readLine());
-
-                if (recuento < 11) {
-                    total= total + numero;
-                    recuento = recuento + 1;
-                }
-            }
-        while ( recuento < 11);
-        System.out.println("El Total es : " +total);
+            total = total + numero;
+        }
+        System.out.println("El Total es : " + total);
     }
 
 }

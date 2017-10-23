@@ -18,23 +18,31 @@ public class Main {
 
         System.out.println(+aleatorio);
 
-        int numero = 0;
         int intentos = 0;
+        int conversion=0;
+        String respuesta = "";
 
         do {
             System.out.print("Adivina el numero: ");
-            numero = Integer.parseInt(br.readLine());
+            respuesta = br.readLine();
 
-            if (numero == aleatorio) {
-                System.out.println("Has acertado, el numero es: " + numero + "\n" + "Tu numero de intentos ha sido de " + intentos);
-            } else {
-                if (numero < aleatorio) {
-                    System.out.println("El numero que buscas es más alto");
+
+            if (!respuesta.equals("FIN")) {
+
+                conversion = Integer.parseInt(respuesta);
+
+                if (conversion == aleatorio) {
+                    System.out.println("Has acertado, el numero es: " + conversion + "\n" + "Tu numero de intentos ha sido de " + intentos);
                 } else {
-                    System.out.println("El numero que buscas es más bajo");
+                    if (conversion < aleatorio) {
+                        System.out.println("El numero que buscas es más alto");
+                    } else {
+                        System.out.println("El numero que buscas es más bajo");
+                    }
                 }
+                intentos++;
             }
-            intentos++;
-        } while (aleatorio != numero);
+        } while (aleatorio != conversion && !respuesta.equals("FIN"));
+        System.out.println("Fin del programa.");
     }
 }

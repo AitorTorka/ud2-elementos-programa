@@ -13,17 +13,17 @@ public class Main {
 
         Nota: El área es igual a la base por la altura entre dos.*/
 
-        int base = 0;
-        int altura = 0;
-        int area = 0;
+        double base = 0;
+        double altura = 0;
+        double area = 0;
 
         BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
 
         System.out.print("Introduce Una Base: ");
-        base = Integer.parseInt(br.readLine());
+        base = Double.parseDouble(br.readLine());
 
         System.out.print("Introduce Una Altura: ");
-        altura = Integer.parseInt(br.readLine());
+        altura = Double.parseDouble(br.readLine());
 
         area = (base * altura) / 2;
 
